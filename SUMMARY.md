@@ -14,7 +14,4 @@
 * [Images & media](group-1/images-and-media.md)
 * [Interactive blocks](group-1/interactive-blocks.md)
 * [OpenAPI](group-1/openapi.md)
-
-***
-
-* [Integrations](integrations.md)
+* [Integrations](group-1/integrations.md)
