@@ -54,7 +54,7 @@ Oracle ByteBuffer Docs
 
 우선 메모리를 할당해야 읽던 쓰던 할 수 있겠지? ByteBuffer의 `allocate(int capacity)` 는 JVM의 힙에 바이트 버퍼를 생성한다. 하지만 우리는 시스템 메모리에 할당하고 싶다.
 
-* \`public static ByteBuffer allocateDirect(int capacity)\` 를 사용한다.&#x20;
+* `public static ByteBuffer allocateDirect(int capacity)` 를 사용한다.&#x20;
 
 ```java
 // Direct Buffer 할당
@@ -77,7 +77,7 @@ Boolean isDirect = directBuffer.isDirect();
 
 ### 메모리에 자바 자료형으로 읽고 쓰기&#x20;
 
-버퍼가 byte 단위이긴 하지만 우리는 편의상 String, int와 같은 친구들을 적고 싶다. 그래서 여러가지 구현체들을 제공한다.
+버퍼가 byte 단위이긴 하지만 우리는 편의상 String, int와 같은 친구들을 적고 싶다. 그래서 여러가지 구현체(IntBuffer, CharBuffer)들을 제공한다.
 
 
 
@@ -105,6 +105,10 @@ System.out.println(buf.position() + " : " + buf.limit() + " : " + buf.capacity()
 실행결과를 살펴보자
 
 #### 1. Position, Limit, Capacity의 변화
+
+* `position`: 현재 읽기/쓰기 위치.
+* `limit`: 읽기/쓰기가 가능한 최댓값.
+* `capacity`: 버퍼의 전체 크기.
 
 read전에는 position이 0이지만, read하고 나서는 position이 10으로 변경되었다. 버퍼에서 현재 읽고 있는 오프셋을 position으로 생각하면 된다. FILE IO시에 우리는 **lseek**같은 함수들로 파일내의 오프셋을 조작했다. File IO에서도 동일하게 position, limit, capacity를 통해 **오프셋을 조정**하게 된다.
 
