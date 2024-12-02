@@ -6,6 +6,7 @@
 
 * [Java NIO - Buffer](undefined/java-nio-buffer.md)
 * [Java NIO - Direct Buffer 사용하기](undefined/java-nio-direct-buffer.md)
+* [Scatter / Gather](undefined/scatter-gather.md)
 
 ## Group 1
 
