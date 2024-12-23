@@ -52,8 +52,6 @@ select e_u.unique_id, e.name
 
 ### 2.[Product Sales Analysis I](https://leetcode.com/problems/product-sales-analysis-i/)&#x20;
 
-
-
 ```
 Sales table:
 +---------+------------+------+----------+-------+
@@ -71,9 +69,13 @@ Product table:
 | 200        | Apple        |
 | 300        | Samsung      |
 +------------+--------------+
+
 ```
 
+* 요 문제는 product\_id를 기준으로 상품의 이름, 가격, 연도를 출력하는 문제였다. 문제 조건에서 NULLABLE같은 내용은 없어서 inner-join으로 쉽게 풀었다. 어떤 사람의 풀이에서는 "DISTINCT를 쓰면 속도가 빨라짐"이라고 했는데 정확한 이유는 아직 읽지않았다.
+
 ````
+
 ```mysql
 select p.product_name, s.year, s.price
     from Product p
