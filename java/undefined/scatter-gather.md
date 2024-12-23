@@ -82,7 +82,7 @@ ssize_t readv (int fd, const struct iovec *iov, int count);
 
 시스템콜을 호출하여 IO를 프로그램에서 요청하게 되면 컨텍스트 스위칭이 발생하고, 컨텍스트 스위치는 당연히 오버헤드를 만든다. 실제로 멀티 프로세스/스레드 프로그래밍을 하면서 프로파일링을 해보면 시스템콜로 인한 시간이 가장 점유율이 높은 것을 학교 과제에서 여러번 마주했다.
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-12-02 at 2.59.09 PM.png" alt=""><figcaption><p>Gathering Write 과정</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-12-02 at 2.59.09 PM.png" alt=""><figcaption><p>Gathering Write 과정</p></figcaption></figure>
 
 그림과 같이 여러 버퍼에서 Gather하여 커널의 버퍼에 한번에 write한다. **시스템콜의 횟수가 3회에서 1회로 줄어들게 된다.**
 
@@ -110,7 +110,7 @@ ssize_t readv (int fd, const struct iovec *iov, int count);
 
 #### 2.1 일반적인 데이터 전송
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-12-02 at 3.29.19 PM.png" alt=""><figcaption><p>IBM: <a href="https://developer.ibm.com/articles/j-zerocopy/">https://developer.ibm.com/articles/j-zerocopy/</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-12-02 at 3.29.19 PM.png" alt=""><figcaption><p>IBM: <a href="https://developer.ibm.com/articles/j-zerocopy/">https://developer.ibm.com/articles/j-zerocopy/</a></p></figcaption></figure>
 
 그림과 같이 애플리케이션 영역에 버퍼로 copy가 일어나게된다. CPU가 이를 담당하게된다. 그림을 보면서 과정을 생각해보자.
 
@@ -130,7 +130,7 @@ ssize_t readv (int fd, const struct iovec *iov, int count);
 
 그런데 유저영역의 버퍼를 사용하지 않고 커널의 버퍼만을 사용하면 어떻게 될까?
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-12-02 at 3.33.21 PM (1).png" alt=""><figcaption><p>IBM : <a href="https://developer.ibm.com/articles/j-zerocopy/">https://developer.ibm.com/articles/j-zerocopy/</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-12-02 at 3.33.21 PM (1).png" alt=""><figcaption><p>IBM : <a href="https://developer.ibm.com/articles/j-zerocopy/">https://developer.ibm.com/articles/j-zerocopy/</a></p></figcaption></figure>
 
 1. 애플리케이션에서 transferTo()를 호출한다.
 2. DMA 엔진에 데이터 접근을 호출하고 이를 커널의 버퍼에 복사한다.
@@ -149,7 +149,7 @@ ssize_t readv (int fd, const struct iovec *iov, int count);
 
 Scatter / Gather은 여러 버퍼, 공간에 대해서 한번의 IO로 읽기 / 쓰기를 할 수 있도록 한다고 공부했다. 또 실제 메모리공간에 직접 접근하는 것도 배웠다. DMA가 SG(이하 Scatter/Gather)을 지원한다면 우리는 버퍼간의 CPU 복사가 아닌 NIC의 Gathering을 통해서 CPU 복사 없이 데이터를 전달할 수 있다!
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-12-02 at 3.39.08 PM.png" alt=""><figcaption><p>IBM : <a href="https://developer.ibm.com/articles/j-zerocopy/">https://developer.ibm.com/articles/j-zerocopy/</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-12-02 at 3.39.08 PM.png" alt=""><figcaption><p>IBM : <a href="https://developer.ibm.com/articles/j-zerocopy/">https://developer.ibm.com/articles/j-zerocopy/</a></p></figcaption></figure>
 
 1. 애플리케이션에서 transferTo()를 호출한다.
 2. DMA 엔진에 데이터 접근을 호출하고 이를 커널의 버퍼에 복사한다.

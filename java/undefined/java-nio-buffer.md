@@ -20,7 +20,7 @@ NIO를 처음 마주한 것은 수업시간이 아닌 카프카였다.
 
 당연히 성능 저하가 발생한다. 실제메모리 영역에서는 멀리 떨어져있지 않은 공간에 대한 수정도 여러차례에 걸쳐서 발생하게 될 수 있다. **따라서 운영체제는 IO를 버퍼링하고 특정 시점에 한번에 반영한다.**
 
-<figure><img src="../.gitbook/assets/page-cache.png" alt=""><figcaption><p><a href="https://biriukov.dev/docs/page-cache/2-essential-page-cache-theory/">https://biriukov.dev/docs/page-cache/2-essential-page-cache-theory/</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/page-cache.png" alt=""><figcaption><p><a href="https://biriukov.dev/docs/page-cache/2-essential-page-cache-theory/">https://biriukov.dev/docs/page-cache/2-essential-page-cache-theory/</a></p></figcaption></figure>
 
 * **그런데 여기 NIO에서 버퍼는 뭘까?**
 

@@ -85,7 +85,7 @@ decrease monitor lock value -1 ; free
 * **모든 객체는 암묵적으로 lock을 갖고있다라고 해석할 수 있다.**
 * 메인 스레드의 스레드 덤프를 JConsole에서 확인해보면 아래와 같다.
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-09-17 at 4.36.38 PM.png" alt=""><figcaption><p>lock을 확인기</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-09-17 at 4.36.38 PM.png" alt=""><figcaption><p>lock을 확인기</p></figcaption></figure>
 
 락을 두번 걸게되는데 상속에 관계없이 동일한 객체에 거는 것을 알 수 있다.
 

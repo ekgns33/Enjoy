@@ -2,12 +2,13 @@
 
 * [무럭무럭 자라는 새싹](README.md)
 
-## Java - 기본편
+## Java 공부
 
-* [Java NIO - Direct Buffer 사용하기](java/java-nio-direct-buffer.md)
-* [Scatter / Gather](java/scatter-gather.md)
-* [Java - Thread Safe / lock](java/java-thread-safe-lock.md)
-* [Java NIO - Buffer](java/java-nio-buffer.md)
+* [기본편](java/undefined/README.md)
+  * [Java NIO - Direct Buffer 사용하기](java/undefined/java-nio-direct-buffer.md)
+  * [Scatter / Gather](java/undefined/scatter-gather.md)
+  * [Java - Thread Safe / lock](java/undefined/java-thread-safe-lock.md)
+  * [Java NIO - Buffer](java/undefined/java-nio-buffer.md)
 
 ## DB공부
 

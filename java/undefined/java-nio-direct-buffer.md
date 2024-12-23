@@ -4,8 +4,6 @@ description: Access OS Memory through DirectBuffer
 
 # Java NIO - Direct Buffer 사용하기
 
-
-
 ## Direct Buffer
 
 * 이전 글에서 ByteBuffer를 활용하여 시스템 메모리에 직접 접근할 수 있는 구현체인 Direct Buffer의 장단점까지 살펴보았다. 이번에는 간단하게 사용하는 방법을 살펴본다.
@@ -100,7 +98,7 @@ System.out.println(buf.position() + " : " + buf.limit() + " : " + buf.capacity()
 
 ```
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-11-25 at 11.37.02 AM.png" alt=""><figcaption><p>실행결과</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-11-25 at 11.37.02 AM.png" alt=""><figcaption><p>실행결과</p></figcaption></figure>
 
 실행결과를 살펴보자
 
@@ -112,7 +110,7 @@ System.out.println(buf.position() + " : " + buf.limit() + " : " + buf.capacity()
 
 read전에는 position이 0이지만, read하고 나서는 position이 10으로 변경되었다. 버퍼에서 현재 읽고 있는 오프셋을 position으로 생각하면 된다. FILE IO시에 우리는 **lseek**같은 함수들로 파일내의 오프셋을 조작했다. File IO에서도 동일하게 position, limit, capacity를 통해 **오프셋을 조정**하게 된다.
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-11-25 at 11.49.20 AM.png" alt=""><figcaption><p>write, read 시 position의 변화</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-11-25 at 11.49.20 AM.png" alt=""><figcaption><p>write, read 시 position의 변화</p></figcaption></figure>
 
 #### 2. 출력 결과가 4, 8??
 
@@ -171,7 +169,7 @@ while(buf.hasRemaining()) {
 }
 ```
 
-<figure><img src="../.gitbook/assets/Screenshot 2024-11-25 at 12.13.27 PM.png" alt="" width="249"><figcaption><p>실행결과</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Screenshot 2024-11-25 at 12.13.27 PM.png" alt="" width="249"><figcaption><p>실행결과</p></figcaption></figure>
 
 * **복사한 버퍼에서 쓰기를 한다고 다른 버퍼의 position이 바뀌지 않는다**
   * position, limit, capacity는 버퍼마다 고유한 속성이다.
