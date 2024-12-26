@@ -10,6 +10,12 @@
   * [Java - Thread Safe / lock](java/undefined/java-thread-safe-lock.md)
   * [Java NIO - Buffer](java/undefined/java-nio-buffer.md)
 
+***
+
+* [테스트](undefined/README.md)
+  * [테스트 코드편](undefined/undefined/README.md)
+    * [@ParameterizedTest + Enum](undefined/undefined/parameterizedtest-+-enum.md)
+
 ## DB공부
 
 * [기본편](db/undefined/README.md)
