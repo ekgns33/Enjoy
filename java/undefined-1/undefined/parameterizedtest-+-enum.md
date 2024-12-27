@@ -156,7 +156,7 @@ void exceptWaiting_OthersReturnFalse(DomainStatus status) {
 2. {arguments} : 우리가 입력한 변수들의 리스트를 comma로 구분하여 표시한다.
 3. {0}, {1} .. : 입력 변수 각각의 placeholder로 {0}에는 status가 담긴다. 첫번째 인자니까\~
 
-<figure><img src="../../.gitbook/assets/Screenshot 2024-12-26 at 7.40.13 PM.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/Screenshot 2024-12-26 at 7.40.13 PM.png" alt=""><figcaption></figcaption></figure>
 
 ***
 

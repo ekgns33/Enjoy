@@ -9,12 +9,9 @@
   * [Scatter / Gather](java/undefined/scatter-gather.md)
   * [Java - Thread Safe / lock](java/undefined/java-thread-safe-lock.md)
   * [Java NIO - Buffer](java/undefined/java-nio-buffer.md)
-
-***
-
-* [테스트](undefined/README.md)
-  * [테스트 코드편](undefined/undefined/README.md)
-    * [@ParameterizedTest + Enum](undefined/undefined/parameterizedtest-+-enum.md)
+* [테스트](java/undefined-1/README.md)
+  * [테스트 코드편](java/undefined-1/undefined/README.md)
+    * [@ParameterizedTest + Enum](java/undefined-1/undefined/parameterizedtest-+-enum.md)
 
 ## DB공부
 
@@ -22,6 +19,11 @@
   * [테이블 조인 종류](db/undefined/undefined.md)
 * [Leetcode로 연습하는 SQL](db/leetcode-sql/README.md)
   * [join - easy](db/leetcode-sql/join-easy.md)
+
+***
+
+* [PS 기록](ps/README.md)
+  * [LeetCode Mock Interview - 1](ps/leetcode-mock-interview-1.md)
 
 ## Group 1
 
