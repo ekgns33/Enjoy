@@ -12,6 +12,7 @@
 * [테스트](java/undefined-1/README.md)
   * [테스트 코드편](java/undefined-1/undefined/README.md)
     * [@ParameterizedTest + Enum](java/undefined-1/undefined/parameterizedtest-+-enum.md)
+  * [JMeter 설정, 시나리오 작성 기본](java/undefined-1/jmeter.md)
 
 ## DB공부
 
