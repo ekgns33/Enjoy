@@ -9,10 +9,12 @@
   * [Scatter / Gather](java/undefined/scatter-gather.md)
   * [Java - Thread Safe / lock](java/undefined/java-thread-safe-lock.md)
   * [Java NIO - Buffer](java/undefined/java-nio-buffer.md)
-* [테스트](java/undefined-1/README.md)
-  * [테스트 코드편](java/undefined-1/undefined/README.md)
-    * [@ParameterizedTest + Enum](java/undefined-1/undefined/parameterizedtest-+-enum.md)
-  * [JMeter 설정, 시나리오 작성 기본](java/undefined-1/jmeter.md)
+* [서버 개발](java/undefined-1/README.md)
+  * [JPA 전역에 쿼리 제한을 적용하는 법](java/undefined-1/jpa.md)
+* [테스트](java/undefined-2/README.md)
+  * [테스트 코드편](java/undefined-2/undefined/README.md)
+    * [@ParameterizedTest + Enum](java/undefined-2/undefined/parameterizedtest-+-enum.md)
+  * [JMeter 설정, 시나리오 작성 기본](java/undefined-2/jmeter.md)
 
 ## DB공부
 
