@@ -11,6 +11,7 @@
   * [Java NIO - Buffer](java/undefined/java-nio-buffer.md)
 * [서버 개발](java/undefined-1/README.md)
   * [JPA 전역에 쿼리 제한을 적용하는 법](java/undefined-1/jpa.md)
+  * [Optimistic Lock](java/undefined-1/optimistic-lock.md)
 * [테스트](java/undefined-2/README.md)
   * [테스트 코드편](java/undefined-2/undefined/README.md)
     * [@ParameterizedTest + Enum](java/undefined-2/undefined/parameterizedtest-+-enum.md)
