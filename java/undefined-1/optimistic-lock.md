@@ -179,7 +179,7 @@ class Stock(
 
 * 서비스 부분에는 Retry 어노테이션을 추가한다. 직접 구현할 수도 있고, 라이브러리를 사용할 수도 있다.
 
-```
+```kotlin
 @Retryable(retryFor = [OptimisticLockingFailureException::class],
         backoff = Backoff(delay = 1000, multiplier = 2.0),
         maxAttempts = 10
