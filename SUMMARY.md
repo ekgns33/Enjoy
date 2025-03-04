@@ -29,6 +29,7 @@
 * [PS 기록](ps/README.md)
   * [LeetCode Mock Interview - 1](ps/leetcode-mock-interview-1.md)
   * [LeetCode Mock Interview - 2](ps/leetcode-mock-interview-2.md)
+  * [LeetCode Mock Interview -3](ps/leetcode-mock-interview-3.md)
 
 ## Group 1
 
