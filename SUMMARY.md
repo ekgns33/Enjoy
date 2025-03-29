@@ -16,6 +16,7 @@
 * [테스트](java/undefined-2/README.md)
   * [테스트 코드편](java/undefined-2/undefined/README.md)
     * [@ParameterizedTest + Enum](java/undefined-2/undefined/parameterizedtest-+-enum.md)
+    * [RestAssured로 시나리오 테스트하기](java/undefined-2/undefined/restassured.md)
   * [JMeter 설정, 시나리오 작성 기본](java/undefined-2/jmeter.md)
 
 ## DB공부
