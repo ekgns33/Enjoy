@@ -13,6 +13,7 @@
   * [JPA 전역에 쿼리 제한을 적용하는 법](java/undefined-1/jpa.md)
   * [Optimistic Lock](java/undefined-1/optimistic-lock.md)
   * [자료구조와 OS 캐시](java/undefined-1/os.md)
+  * [HTTP/2.0](java/undefined-1/http-2.0.md)
 * [테스트](java/undefined-2/README.md)
   * [테스트 코드편](java/undefined-2/undefined/README.md)
     * [@ParameterizedTest + Enum](java/undefined-2/undefined/parameterizedtest-+-enum.md)
