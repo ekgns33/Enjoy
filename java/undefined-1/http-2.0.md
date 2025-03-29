@@ -148,3 +148,8 @@ CSS, js, html에 들어간 리소스를 서버가 푸시할 수 있음. 이러�
 * **서버는 안전하고, 캐싱가능하며, 본문을 포함하지 않는 요청만 푸시한다.**
 
 ***
+
+#### 참고한 자료
+
+* HTTP 완벽가이드 - Oreilly
+* Wiki:  https://ko.wikipedia.org/wiki/HTTP\_%EC%95%95%EC%B6%95
