@@ -183,7 +183,8 @@ ResponseEntity<String> response = restTemplate.postForEntity(
 
 1. 식별할 수 있는 방법이 필요한데 정수값은 위험하다고 판단했다.
 2. 단순 UUID만 저장하는 것이 아니라 소셜 정보도 일부 저장해야한다.
-3.
+
+
 
 ***
 
