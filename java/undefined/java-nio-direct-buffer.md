@@ -42,11 +42,9 @@ Direct Buffer는 시스템 메모리에 직접 Java를 활용하여 IO를 할 �
 Oracle ByteBuffer Docs
 {% endembed %}
 
-###
-
 ***
 
-###
+
 
 ### 메모리 할당하기 - allocateDirect()
 
