@@ -14,7 +14,7 @@ description: 자료구조와 캐시
 
 * **이진 탐색** 만약 데이터가 숫자라면 이야기가 조금 달라진다. 데이터를 저장할때, 정렬이 유지되는 자료구조를 사용한다면 삽입, 조회, 삭제를 $$O(logn)$$ 에 수행할 수 있다. 물론 이는 Balanced Binary Tree 자료구조를 사용할때 이야기이다.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p><a href="https://en.wikipedia.org/wiki/Binary_search">https://en.wikipedia.org/wiki/Binary_search</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p><a href="https://en.wikipedia.org/wiki/Binary_search">https://en.wikipedia.org/wiki/Binary_search</a></p></figcaption></figure>
 
 * **해시** 우리가 마주하는 데이터들은 보통 문자열이나 복잡한 객체이다. 이 친구들이 자신만을 의미하는 고유한 값들이 있다면 우리는 $$O(1)$$ 에 값을 조회할 수도 있다.
 
