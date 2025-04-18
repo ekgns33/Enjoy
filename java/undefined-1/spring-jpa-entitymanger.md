@@ -24,7 +24,7 @@ JPA를 사용할때, EntityManger을 `@PersistenceContext` 로 주입받아서 �
 {% endstep %}
 
 {% step %}
-### Spring Boot에서 EntityManagerFactory가 빈으로 등록되는 과정 디버깅
+### Spring Boot에서 EntityManagerFactory가 빈으로 등록되는 과정 추적하기
 
 [#entitymanagerfactory](spring-jpa-entitymanger.md#entitymanagerfactory "mention")
 {% endstep %}
@@ -42,7 +42,7 @@ JPA를 사용할때, EntityManger을 `@PersistenceContext` 로 주입받아서 �
 
 ***
 
-
+### Spring 공식문서 보고 EntityManagerFactory에 대해 정리
 
 ### Spring 공식문서 찾아보기
 
@@ -96,19 +96,22 @@ JNDI로 EntityManager을 획득하는 경우에는 xml 설정을 해줘야한다
 
 **아마도 스프링 부트를 사용하면 해당 옵션을 사용하지 않을까?**
 
+
+
 이 옵션에서는 `EntityManagerFactory` 에 대한 모든 설정을 허용한다.
 
 * Datasource 스프링빈컨테이너에서 사용가능
-* `loadTimeWeaver` 로 바이트코드 위빙 설정가능
-  * **하이버네이트에서는 필요없음.**
+*   `loadTimeWeaver` 로 바이트코드 위빙 설정가능
 
-스프링 부트에서는 가장 기능도 다양하고 유연한 3번째 `LocalContainerEntityManagerFactoryBean` 을 default로 사용한다.
+    * **하이버네이트에서는 필요없음.**
 
 
+
+스프링 부트에서는 가장 기능도 다양하고 유연한 3번째 `LocalContainerEntityManagerFactoryBean` 을 사용한다.
 
 ***
 
-
+### Spring Boot에서 EntityManagerFactory가 빈으로 등록되는 과정 추적하기
 
 ### EntityManagerFactory를 생성
 
@@ -161,8 +164,6 @@ PersistenceUnitManager에서는 저 값을 활용하여 PersistenceUnit을 만�
 
 
 
-
-
 **3. Hibernate EntityManagerFactory를 만든다.**
 
 <figure><img src="../../.gitbook/assets/Screenshot 2025-04-18 at 1.51.58 PM.png" alt=""><figcaption></figcaption></figure>
@@ -183,6 +184,8 @@ PersistenceUnitManager에서는 저 값을 활용하여 PersistenceUnit을 만�
 빌더의 생성자 부분으로 들어가 스프링으로부터 넘어온 **PersistenceUnit**에 어떤 값들이 들어있는지 확인해볼 수 있다. 현재는 예제로 만들었던 `Stock`클래스와 패키지 정보가 들어가있다.
 
 ***
+
+## EntityManger를 주입받는 방법, 과정 살펴보기
 
 ### EntityManager을 DI 받기
 
@@ -209,7 +212,7 @@ PersistenceUnitManager에서는 저 값을 활용하여 PersistenceUnit을 만�
 
 <figure><img src="../../.gitbook/assets/Screenshot 2025-04-18 at 5.32.26 PM.png" alt=""><figcaption></figcaption></figure>
 
-테스트를 실행해봤는데 다음과 같은 <mark style="color:red;">오류가 발생했다.</mark>
+트랜잭션을 시작하고 엔티티하나를 저장하는 테스트를 실행해봤는데 다음과 같은 <mark style="color:red;">오류가 발생했다.</mark>
 
 `SharedEntityManager`에서는 트랜잭션을 생성할 수 없다는 에러다. 이게 뭘까?
 
@@ -217,15 +220,11 @@ PersistenceUnitManager에서는 저 값을 활용하여 PersistenceUnit을 만�
 
 트랜잭션이 시작되면 `TransactionSynchronizationManager` 에서 실제 `EntityManager`을 찾아서 주입해주는 방식이다. 위에서 확인한 <mark style="color:red;">**프록시 객체 자체에게는 트랜잭션을 시작하는 것을 허용하지 않는다!**</mark>
 
-
-
 {% hint style="info" %}
 **프록시 객체를 활용하고 싶으면 스프링에서 제공하는 `@Transactional` 을 사용하여 트랜잭션을 시작한다.** 이는 자동으로 `em.getTranscation.begin()` 을 실행하고 EntityManager로 직접 조작할 수 있게된다.
 {% endhint %}
 
 ***
-
-
 
 #### 직접 EntityManager 만들어서 사용하는 경우
 
@@ -237,8 +236,23 @@ PersistenceUnitManager에서는 저 값을 활용하여 PersistenceUnit을 만�
 
 ```kotlin
 @Autowired
-val emf : EntityManagerFactory = null
-val entityManager = emf?.createEntityManager()
+lateinit var emf : EntityManagerFactory
+
+@Test
+fun test_transaction() {
+    var entityManager = emf.createEntityManager()
+    try {
+        entityManager.transaction.begin();
+        val stock = Stock(
+            stock = 100,
+        );
+        entityManager.persist(stock);
+        entityManager.flush();
+    } catch (e: Exception) {
+        println("Error starting transaction: ${e.message}")
+        entityManager.transaction.rollback()
+    }
+}
 
 ```
 
@@ -249,13 +263,9 @@ val entityManager = emf?.createEntityManager()
 
 **또한 Hibernate의 세션 구현체가 주입된다!** Spring에서는 EntityManager로 추상화되었지만 _실제 트랜잭션의 Manager인 하이버네이트의 세션으로 전환된다._
 
-
-
 ***
 
 #### 스프링 트랜잭션 위에서 프록시를 사용하는 경우
-
-
 
 <figure><img src="../../.gitbook/assets/Screenshot 2025-04-18 at 6.03.05 PM.png" alt=""><figcaption></figcaption></figure>
 
@@ -264,19 +274,15 @@ val entityManager = emf?.createEntityManager()
 
 * `SharedEntityManagerInvocationHandler`에서 호출되면 현재 트랜잭션의 엔티티 매니저를 조회한다.
 
-
-
 <figure><img src="../../.gitbook/assets/Screenshot 2025-04-18 at 6.04.00 PM.png" alt=""><figcaption></figcaption></figure>
 
 `EntityManagerFactoryUtils`에서 `TransactionSynchronizationManager`를 사용하여 **스레드 세이프하게 엔티티매니저를 가져온다.**
-
-
 
 <figure><img src="../../.gitbook/assets/Screenshot 2025-04-18 at 6.05.59 PM.png" alt=""><figcaption></figcaption></figure>
 
 `TransactionSynchronizationManager` 에서 실제 엔티티 매니저를 찾는데, 스프링은 각 트랜잭션마다 **ThreadLocal에 진짜 EntityManager을 넣어놨다가 사용한다.**
 
-스프링은 Hibernate구현체인 EntityManagerImpl을 꺼내고 언래핑하여 하이버네이트 Session을 사용한다.
+스프링은 Hibernate구현체인 EntityManagerImpl을 꺼내고 언래핑하여 하이버네이트 Session을 사용한다!
 
 ***
 
