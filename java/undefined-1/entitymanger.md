@@ -2,7 +2,7 @@
 description: Spring Boot에서 EntityManager은 어떻게 만들어질까?
 ---
 
-# Spring JPA - EntityManger
+# EntityManger는 어떻게 만들어질까
 
 JPA를 사용할때, EntityManger을 `@PersistenceContext` 로 주입받아서 사용할 수 있다.
 
@@ -14,29 +14,29 @@ JPA를 사용할때, EntityManger을 `@PersistenceContext` 로 주입받아서 �
 {% step %}
 ### Spring 공식문서 보고 EntityManagerFactory에 대해 정리
 
-[#spring](spring-jpa-entitymanger.md#spring "mention")
+[#spring](entitymanger.md#spring "mention")
 
-[#id-1.-localentitymangerfactorybean](spring-jpa-entitymanger.md#id-1.-localentitymangerfactorybean "mention")
+[#id-1.-localentitymangerfactorybean](entitymanger.md#id-1.-localentitymangerfactorybean "mention")
 
-[#id-2.-entitymanager-through-jndi](spring-jpa-entitymanger.md#id-2.-entitymanager-through-jndi "mention")
+[#id-2.-entitymanager-through-jndi](entitymanger.md#id-2.-entitymanager-through-jndi "mention")
 
-[#id-3.-localcontainerentitymanagerfactorybean](spring-jpa-entitymanger.md#id-3.-localcontainerentitymanagerfactorybean "mention")
+[#id-3.-localcontainerentitymanagerfactorybean](entitymanger.md#id-3.-localcontainerentitymanagerfactorybean "mention")
 {% endstep %}
 
 {% step %}
 ### Spring Boot에서 EntityManagerFactory가 빈으로 등록되는 과정 추적하기
 
-[#entitymanagerfactory](spring-jpa-entitymanger.md#entitymanagerfactory "mention")
+[#entitymanagerfactory](entitymanger.md#entitymanagerfactory "mention")
 {% endstep %}
 
 {% step %}
 ### EntityManger를 주입받는 방법, 과정 살펴보기
 
-[#entitymanager-di](spring-jpa-entitymanger.md#entitymanager-di "mention")
+[#entitymanager-di](entitymanger.md#entitymanager-di "mention")
 
-[#entitymanager](spring-jpa-entitymanger.md#entitymanager "mention")
+[#entitymanager](entitymanger.md#entitymanager "mention")
 
-[#undefined](spring-jpa-entitymanger.md#undefined "mention")
+[#undefined](entitymanger.md#undefined "mention")
 {% endstep %}
 {% endstepper %}
 
