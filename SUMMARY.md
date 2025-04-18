@@ -17,6 +17,7 @@
   * [HTTP/2.0](java/undefined-1/http-2.0.md)
   * [Json을 DB에 저장하기](java/undefined-1/json-db.md)
   * [애플 소셜로그인, 회원 가입/탈퇴 구현하기](java/undefined-1/undefined.md)
+  * [Spring JPA - EntityManger](java/undefined-1/spring-jpa-entitymanger.md)
 * [테스트](java/undefined-2/README.md)
   * [테스트 코드편](java/undefined-2/undefined/README.md)
     * [@ParameterizedTest + Enum](java/undefined-2/undefined/parameterizedtest-+-enum.md)
