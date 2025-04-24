@@ -83,7 +83,7 @@ HTTP 헤더에 IP 주소 정보가 들어가지는 않는다. 네트워크 계�
 
 
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p><a href="https://en.wikipedia.org/wiki/Proxy_server">https://en.wikipedia.org/wiki/Proxy_server</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p><a href="https://en.wikipedia.org/wiki/Proxy_server">https://en.wikipedia.org/wiki/Proxy_server</a></p></figcaption></figure>
 
 프록시 서버를 사용하는 경우에도 식별이 어려워진다. 캐싱, 보안 등을 위해 프록시 서버를 활용하는 경우에 클라이언트는 프록시서버의 IP를 보게된다. 또한 실제 서버도 프록시서버로부터 요청을 포워딩 받기 때문에 활용하기 어려워진다.
 
