@@ -137,7 +137,7 @@ fun `재고 감소 동시테스트`() {
 
 엔티티에 버젼 컬럼을 추가한다. 한 트랜잭션이 시작될때마다 초기의 버전값을 기억하고 로직을 수행한다. 마지막 데이터베이스의 커밋시점에 버전값이 달라진다면, 낙관락 예외를 발생한다.
 
-<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p><a href="https://systemdesignschool.io/blog/optimistic-locking">https://systemdesignschool.io/blog/optimistic-locking</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p><a href="https://systemdesignschool.io/blog/optimistic-locking">https://systemdesignschool.io/blog/optimistic-locking</a></p></figcaption></figure>
 
 
 

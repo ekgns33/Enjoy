@@ -16,7 +16,7 @@ OAuth2.0은 사용자 인증에 사용되는 개방형 프로토콜로, 서드�
 * 인증보다는 인가에 가깝다.
 * 서비스 제공자의 API를 이용할 수 있는 권한을 부여한다.
 
-<figure><img src="../../.gitbook/assets/image.png" alt=""><figcaption><p><a href="https://upload.wikimedia.org/wikipedia/commons/7/72/Abstract-flow.png">https://upload.wikimedia.org/wikipedia/commons/7/72/Abstract-flow.png</a></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/image (1).png" alt=""><figcaption><p><a href="https://upload.wikimedia.org/wikipedia/commons/7/72/Abstract-flow.png">https://upload.wikimedia.org/wikipedia/commons/7/72/Abstract-flow.png</a></p></figcaption></figure>
 
 **1. 소셜 로그인을 진행하는 사용자의 정보는 리소스 소유자 측에 있다.**
 
