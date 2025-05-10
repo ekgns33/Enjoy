@@ -26,6 +26,7 @@
     * [@ParameterizedTest + Enum](java/undefined-2/undefined/parameterizedtest-+-enum.md)
     * [RestAssured로 시나리오 테스트하기](java/undefined-2/undefined/restassured.md)
   * [JMeter 설정, 시나리오 작성 기본](java/undefined-2/jmeter.md)
+  * [WebSocket 부하테스트 - 터진 서버를 살리자](java/undefined-2/websocket.md)
 
 ## DB공부
 
