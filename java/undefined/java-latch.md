@@ -155,7 +155,7 @@ System.out.println("Time taken: " + (end - start) + " ms");
 
 배운점
 
-* Spring Kafka쪽에서 어떤 PR이 올라오는지 보는데 비동기 로직, 병렬 로직에 대한 테스트 코드를 작성할대 Latch, Future 같은 것들이 많이 사용됐다.
+* Spring Kafka쪽에서 어떤 PR이 올라오는지 보는데 비동기 로직, 병렬 로직에 대한 테스트 코드를 작성할때 Latch, Future 같은 것들이 많이 사용됐다.
 * Latch는 일회성이기 때문에 테스트 코드에서 특정 상황을 만들기 위한 카운터변수로 활용하기 좋을 것 같다.
 
 참고한 자료
@@ -164,4 +164,4 @@ System.out.println("Time taken: " + (end - start) + " ms");
 
 {% embed url="https://docs.oracle.com/en/java/javase/21/docs/api/java.base/java/util/concurrent/CountDownLatch.html" %}
 
-* 자바 병렬 프로그래밍 - 브라이언 게
+* 자바 병렬 프로그래밍 - 브라이언 게츠&#x20;
