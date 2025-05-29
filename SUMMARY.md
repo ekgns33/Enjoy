@@ -11,6 +11,7 @@
   * [Java NIO - Buffer](java/undefined/java-nio-buffer.md)
   * [Jackson이 제네릭 타입을 보존하는법 -TypeReference](java/undefined/jackson-typereference.md)
   * [JDBC - Driver 로드, Java SPI](java/undefined/jdbc-driver-java-spi.md)
+  * [Java - Latch](java/undefined/java-latch.md)
 * [서버 개발](java/undefined-1/README.md)
   * [JPA 전역에 쿼리 제한을 적용하는 법](java/undefined-1/jpa.md)
   * [Optimistic Lock](java/undefined-1/optimistic-lock.md)
