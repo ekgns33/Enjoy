@@ -35,6 +35,7 @@
 * [기본편](db/undefined/README.md)
   * [테이블 조인 종류](db/undefined/undefined.md)
   * [인덱스와 B+Tree](db/undefined/b+tree.md)
+  * [DB INSERT에 고려할것들](db/undefined/db-insert.md)
 * [Leetcode로 연습하는 SQL](db/leetcode-sql/README.md)
   * [join - easy](db/leetcode-sql/join-easy.md)
 
