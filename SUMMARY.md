@@ -24,6 +24,7 @@
   * [EntityManger는 어떻게 만들어질까](java/undefined-1/entitymanger.md)
   * [Spring Security - CSRF](java/undefined-1/spring-security-csrf.md)
   * [Spring MVC - @Valid와 BindingResult로 응답 제공하기](java/undefined-1/spring-mvc-valid-bindingresult.md)
+  * [분산환경에서 스케줄링 제어 - ShedLo](java/undefined-1/shedlo.md)
 * [테스트](java/undefined-2/README.md)
   * [테스트 코드편](java/undefined-2/undefined/README.md)
     * [@ParameterizedTest + Enum](java/undefined-2/undefined/parameterizedtest-+-enum.md)
