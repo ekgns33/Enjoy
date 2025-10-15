@@ -2,7 +2,7 @@
 description: 직렬화할때 다형성을 처리하는 방법
 ---
 
-# JSON Serde에 활용하는 @JsonTypeInfo, @JsonSubType
+# Json 직렬화에 활용하는 @JsonTypeInfo, @JsonSubType
 
 ### Spring Boot 그리고 Jackson
 
@@ -14,13 +14,11 @@ JsonSerialize를 해서 외부에 보내야하는 이벤트와 같은 객체들�
 
 다형성을 지원하기 위한 어노테이션으로 직렬화/역직렬화 시 구체적인 타입을 결정하도록 타입 정보를 포함시킨다. 인터페이스나 추상 클래스에서 구현 클래스에 대한 타입 정보를 직렬화 시 include하도록 할 수 있다.
 
-
-
 ### @JsonTypeInfo 의 속성들
 
 #### **use**
 
-필수적으로 포함해야하는 속성값은 `use` 라는 속성이 있다. 이 속성은 타입 메타데이터의 종류를 가리킨다.
+<mark style="color:red;">필수적으로</mark> 포함해야하는 속성값은 `use` 라는 속성이 있다. 이 속성은 타입 메타데이터의 종류를 가리킨다. 타입을 구분하는데 사용한다.
 
 * `JsonTypeInfo.Id.Class` : 자바 클래스명
 * `JsonTypeInfo.Id.Name` : 논리적 타입 이름
@@ -72,7 +70,7 @@ interface AAAA {}
 
 #### **visible**
 
-optional하게 설정할 수 있는데, 타입 식별자 값을 역직렬화 할때 전달할지를 결정한다. 기본값은 false이다.
+optional하게 설정할 수 있는데, 타입 식별자 값을 역직렬화 할때 전달할지를 결정한다. 기본값은 <mark style="color:red;">false</mark>이다.
 
 #### **defaultImpl**
 
@@ -82,7 +80,7 @@ optional 하게 설정하는데, 타입 식별자가 없거나 매핑이 불가�
 
 ### @JsonSubTypes
 
-@JsonTypeInfo와 함께 사용되는데 직렬화 가능한 다형성 타입의 하위 타입들을 지정하고, Json 필드에서 사용되는 논리적인 이름을 연결한다. 해당 어노테이션으로 우리가 특정 타입을 Json의 타입에서 어떻게 분류할지 정할 수 있다.
+@JsonTypeInfo와 함께 사용되는데 직렬화 가능한 다형성 타입의 하위 타입들을 지정하고, Json 필드에서 사용되는 논리적인 이름을 연결한다. 해당 어노테이션으로 우리가 특정 타입을 Json에서 어떻게 분류할지 정할 수 있다.
 
 ```
 @JsonTypeInfo(
@@ -99,10 +97,14 @@ public abstract class TypeA {}
 
 가령 위와 같이 어노테이션을 사용할 수 있다.
 
-* 먼저 JsonTypeInfo에 대해 속성을 지정한다.
-* 이후 JsonSubTypes로 하위 클래스들에 대한 명세를 추가한다.
-  * TypeA라는 추상클래스의 하위 클래스로 SubClass1, SubClass2가 존재한다.
-* **우리는 두 클래스를 직렬화 / 역직렬화할때 구분하고 싶은데 json 에서 "type" 이라는 필드를 보고 구분할 수 있다.**
+1. 먼저 JsonTypeInfo에 대해 속성을 지정한다.
+2. 이후 JsonSubTypes로 하위 클래스들에 대한 명세를 추가한다.
+
+&#x20;       \-  TypeA라는 추상클래스의 하위 클래스로 SubClass1, SubClass2가 존재한다.
+
+
+
+**>> 우리는 두 클래스를 직렬화 / 역직렬화할때 구분할때,  json 에서 "type" 이라는 필드를 보고 구분할 수 있다.**
 
 #### JsonTypeInfo.include 좀 더 살펴보기
 

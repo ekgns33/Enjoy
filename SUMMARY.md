@@ -25,7 +25,7 @@
   * [Spring Security - CSRF](java/undefined-1/spring-security-csrf.md)
   * [Spring MVC - @Valid와 BindingResult로 응답 제공하기](java/undefined-1/spring-mvc-valid-bindingresult.md)
   * [분산환경에서 스케줄링 제어 - ShedLock](java/undefined-1/shedlock.md)
-  * [JSON Serde에 활용하는 @JsonTypeInfo, @JsonSubType](java/undefined-1/json-serde-jsontypeinfo-jsonsubtype.md)
+  * [Json 직렬화에 활용하는 @JsonTypeInfo, @JsonSubType](java/undefined-1/json-jsontypeinfo-jsonsubtype.md)
 * [테스트](java/undefined-2/README.md)
   * [테스트 코드편](java/undefined-2/undefined/README.md)
     * [@ParameterizedTest + Enum](java/undefined-2/undefined/parameterizedtest-+-enum.md)
