@@ -44,6 +44,12 @@
 * [Leetcode로 연습하는 SQL](db/leetcode-sql/README.md)
   * [join - easy](db/leetcode-sql/join-easy.md)
 
+## 북스터디
+
+* [도메인 주도 설계를 위한 함수형 프로그래밍](undefined/undefined/README.md)
+  * [1장. DDD 소개](undefined/undefined/1-.-ddd.md)
+* [Page 2](undefined/page-2.md)
+
 ***
 
 * [PS 기록](ps/README.md)
