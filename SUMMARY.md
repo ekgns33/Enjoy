@@ -50,7 +50,8 @@
 * [도메인 주도 설계를 위한 함수형 프로그래밍](undefined/undefined/README.md)
   * [1장. DDD 소개](undefined/undefined/1-.-ddd.md)
   * [2장. 도메인 이해하기](undefined/undefined/2-..md)
-* [Page 2](undefined/page-2.md)
+* [카프카 핵심 가이드](undefined/undefined-1/README.md)
+  * [카프카 컨슈머를 위한 신뢰성 내용](undefined/undefined-1/undefined.md)
 
 ***
 

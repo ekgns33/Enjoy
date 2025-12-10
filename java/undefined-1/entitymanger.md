@@ -127,8 +127,7 @@ JNDI로 EntityManager을 획득하는 경우에는 xml 설정을 해줘야한다
 
 * spring의 boot과정에는 package를 스캔하는 과정이 있는데 그 과정에선 `@Entity` 어노테이션이 표시된 클래스에 대해서 미리 모아두는 것 같다. 찾아보자!
 
-> Traditionally, JPA ‘Entity’ classes are specified in a `persistence.xml` file. With Spring Boot this file is not necessary and instead ‘Entity Scanning’ is used. By default all packages below your main configuration class (the one annotated with `@EnableAutoConfiguration` or `@SpringBootApplication`) will be searched.\
->
+> Traditionally, JPA ‘Entity’ classes are specified in a `persistence.xml` file. With Spring Boot this file is not necessary and instead ‘Entity Scanning’ is used. By default all packages below your main configuration class (the one annotated with `@EnableAutoConfiguration` or `@SpringBootApplication`) will be searched.<br>
 >
 > https://docs.spring.io/spring-boot/docs/1.2.1.RELEASE/reference/html/boot-features-sql.html#boot-features-jpa-and-spring-data
 
@@ -170,8 +169,7 @@ PersistenceUnitManager에서는 저 값을 활용하여 PersistenceUnit을 만�
 
 * EntityManagerFactory를 만드는데 우리는 JPA의 구현체로 Hibernate를 사용하기 때문에 `SpringHibernateJpaPersistenceProvider`에서 Hibernate 팩토리 빌더를 통해서 제공받는다.
 
-\
-
+<br>
 
 <figure><img src="../../.gitbook/assets/Screenshot 2025-04-18 at 2.02.14 PM.png" alt=""><figcaption></figcaption></figure>
 
@@ -256,8 +254,7 @@ fun test_transaction() {
 
 ```
 
-처럼 직접 만들어서 사용하면 에러가 해결된다.\
-
+처럼 직접 만들어서 사용하면 에러가 해결된다.<br>
 
 <figure><img src="../../.gitbook/assets/Screenshot 2025-04-18 at 5.48.08 PM.png" alt=""><figcaption></figcaption></figure>
 
@@ -269,8 +266,7 @@ fun test_transaction() {
 
 <figure><img src="../../.gitbook/assets/Screenshot 2025-04-18 at 6.03.05 PM.png" alt=""><figcaption></figcaption></figure>
 
-`SharedEntityManagerCreator` 에서 스레드-세이프한 프록시를 만들어서 주입한다.\
-
+`SharedEntityManagerCreator` 에서 스레드-세이프한 프록시를 만들어서 주입한다.<br>
 
 * `SharedEntityManagerInvocationHandler`에서 호출되면 현재 트랜잭션의 엔티티 매니저를 조회한다.
 

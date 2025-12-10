@@ -159,8 +159,7 @@ HTTP 쿠키 RFC문서
 
 <figure><img src="../../.gitbook/assets/Screenshot 2025-04-24 at 5.01.14 PM.png" alt=""><figcaption></figcaption></figure>
 
-* **도메인이 명시되지 않으면 서버의 호스트를 기본으로 사용한다.**\
-
+* **도메인이 명시되지 않으면 서버의 호스트를 기본으로 사용한다.**<br>
 
 <figure><img src="../../.gitbook/assets/Screenshot 2025-04-24 at 5.04.16 PM.png" alt=""><figcaption></figcaption></figure>
 
