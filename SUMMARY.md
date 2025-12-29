@@ -60,6 +60,10 @@
   * [LeetCode Mock Interview - 2](ps/leetcode-mock-interview-2.md)
   * [LeetCode Mock Interview -3](ps/leetcode-mock-interview-3.md)
 
+## Misc
+
+* [첫번째 회사 회고](misc/undefined.md)
+
 ## Group 1
 
 * [Page 1](group-1/page-1/README.md)
