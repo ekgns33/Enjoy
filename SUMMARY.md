@@ -15,6 +15,7 @@
   * [Java - Thread Pool, Executor](java/undefined/java-thread-pool-executor.md)
   * [Java - equals & hashCode](java/undefined/java-equals-and-hashcode.md)
 * [서버 개발](java/undefined-1/README.md)
+  * [동적으로 서버 설정 변경하기 1](java/undefined-1/1.md)
   * [JPA 전역에 쿼리 제한을 적용하는 법](java/undefined-1/jpa.md)
   * [Optimistic Lock](java/undefined-1/optimistic-lock.md)
   * [자료구조와 OS 캐시](java/undefined-1/os.md)
