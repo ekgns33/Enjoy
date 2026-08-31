@@ -63,6 +63,7 @@
 ## Misc
 
 * [첫번째 회사 회고](misc/undefined.md)
+* [두번째 회사 6개월 회고](misc/6.md)
 
 ## Group 1
 
